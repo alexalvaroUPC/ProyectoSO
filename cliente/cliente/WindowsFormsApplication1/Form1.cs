@@ -21,8 +21,10 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            IniciarBtn.Visible = false;
+            //RegistrarseBtn.Visible = false;
+            groupBox1.Visible = false;
 
-           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,7 +32,7 @@ namespace WindowsFormsApplication1
             //Creamos un IPEndPoint con el ip del servidor y puerto del servidor 
             //al que deseamos conectarnos
             IPAddress direc = IPAddress.Parse("192.168.56.102");
-            IPEndPoint ipep = new IPEndPoint(direc, 9080);
+            IPEndPoint ipep = new IPEndPoint(direc, 9300);
             
 
             //Creamos el socket 
@@ -40,6 +42,7 @@ namespace WindowsFormsApplication1
                 server.Connect(ipep);//Intentamos conectar el socket
                 this.BackColor = Color.Green;
                 MessageBox.Show("Conectado");
+                IniciarBtn.Visible = true;
 
             }
             catch (SocketException ex)
@@ -53,23 +56,9 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Longitud.Checked)
+            if (DimeContraseña.Checked)
             {
-                string mensaje = "1/" + username.Text;
-                // Enviamos al servidor el nombre tecleado
-                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-                server.Send(msg);
-
-                //Recibimos la respuesta del servidor
-                byte[] msg2 = new byte[80];
-                server.Receive(msg2);
-                MessageBox.Show("Todo va bien");
-                mensaje = Encoding.ASCII.GetString(msg2).Split ('\0')[0];
-                MessageBox.Show("Usuario:", mensaje);
-            }
-            else if (Bonito.Checked)
-            {
-                string mensaje = "2/" + username.Text;
+                string mensaje = "2/" + username.Text + "/" + passwordBox.Text;
                 // Enviamos al servidor el nombre tecleado
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
                 server.Send(msg);
@@ -78,12 +67,26 @@ namespace WindowsFormsApplication1
                 byte[] msg2 = new byte[80];
                 server.Receive(msg2);
                 mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
+                MessageBox.Show(mensaje);
+            }
+            else if (JugadorDatos.Checked)
+            {
+                string mensaje = "1/" + username.Text + "/" + passwordBox.Text;
+                // Enviamos al servidor el nombre tecleado
+                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+                server.Send(msg);
+
+                //Recibimos la respuesta del servidor
+                byte[] msg2 = new byte[80];
+                server.Receive(msg2);
+                mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
+                MessageBox.Show(mensaje);
 
             }
             else
             {
                 // Enviamos nombre y altura
-                string mensaje = "3/" + username.Text;
+                string mensaje = "3/" + username.Text + "/" + passwordBox.Text;
                 // Enviamos al servidor el nombre tecleado
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
                 server.Send(msg);
@@ -122,6 +125,44 @@ namespace WindowsFormsApplication1
         private void alturaBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void JugadorDatos_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IniciarBtn_Click(object sender, EventArgs e)
+        {
+            string mensaje = "4/" + username.Text + "/" + passwordBox.Text;
+            // Enviamos al servidor el nombre tecleado
+            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+            server.Send(msg);
+
+            //Recibimos la respuesta del servidor
+            byte[] msg2 = new byte[80];
+            server.Receive(msg2);
+            mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
+            MessageBox.Show(mensaje);
+
+            if (mensaje == "Has iniciado sesion\n")
+                groupBox1.Visible = true;
+            else if (mensaje == "No existe ese usuario, registrate\n")
+                RegistrarseBtn.Visible = true;
+        }
+
+        private void RegistrarseBtn_Click(object sender, EventArgs e)
+        {
+            string mensaje = "5/" + usuario.Text + "/" + contraBox.Text;
+            // Enviamos al servidor el nombre tecleado
+            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+            server.Send(msg);
+
+            //Recibimos la respuesta del servidor
+            byte[] msg2 = new byte[80];
+            server.Receive(msg2);
+            mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
+            MessageBox.Show(mensaje);
         }
     }
 }
