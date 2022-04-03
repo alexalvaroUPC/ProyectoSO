@@ -45,6 +45,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.usuario = new System.Windows.Forms.TextBox();
             this.contraBox = new System.Windows.Forms.TextBox();
+            this.servicios = new System.Windows.Forms.Button();
+            this.contLbl = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -235,11 +237,33 @@
             this.contraBox.Size = new System.Drawing.Size(244, 26);
             this.contraBox.TabIndex = 14;
             // 
+            // servicios
+            // 
+            this.servicios.Location = new System.Drawing.Point(821, 421);
+            this.servicios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.servicios.Name = "servicios";
+            this.servicios.Size = new System.Drawing.Size(140, 50);
+            this.servicios.TabIndex = 10;
+            this.servicios.Text = "Servicios";
+            this.servicios.UseVisualStyleBackColor = true;
+            this.servicios.Click += new System.EventHandler(this.servicios_Click);
+            // 
+            // contLbl
+            // 
+            this.contLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.contLbl.Location = new System.Drawing.Point(854, 476);
+            this.contLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.contLbl.Name = "contLbl";
+            this.contLbl.Size = new System.Drawing.Size(80, 63);
+            this.contLbl.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 865);
+            this.Controls.Add(this.contLbl);
+            this.Controls.Add(this.servicios);
             this.Controls.Add(this.contraBox);
             this.Controls.Add(this.usuario);
             this.Controls.Add(this.label1);
@@ -281,6 +305,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox usuario;
         private System.Windows.Forms.TextBox contraBox;
+        private System.Windows.Forms.Button servicios;
+        private System.Windows.Forms.Label contLbl;
     }
 }
 

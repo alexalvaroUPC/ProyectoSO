@@ -164,5 +164,19 @@ namespace WindowsFormsApplication1
             mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
             MessageBox.Show(mensaje);
         }
+
+        private void servicios_Click(object sender, EventArgs e)
+        {
+            string mensaje = "6/";
+            // Enviamos al servidor el nombre tecleado
+            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+            server.Send(msg);
+
+            //Recibimos la respuesta del servidor
+            byte[] msg2 = new byte[80];
+            server.Receive(msg2);
+            mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
+            contLbl.Text = mensaje;
+        }
     }
 }
