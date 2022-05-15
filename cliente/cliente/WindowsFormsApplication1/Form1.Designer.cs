@@ -47,7 +47,11 @@
             this.contraBox = new System.Windows.Forms.TextBox();
             this.servicios = new System.Windows.Forms.Button();
             this.contLbl = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Conectados = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Conectados)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -257,11 +261,32 @@
             this.contLbl.Size = new System.Drawing.Size(80, 63);
             this.contLbl.TabIndex = 15;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 16;
+            // 
+            // Conectados
+            // 
+            this.Conectados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Conectados.Location = new System.Drawing.Point(436, 593);
+            this.Conectados.Name = "Conectados";
+            this.Conectados.RowHeadersWidth = 62;
+            this.Conectados.RowTemplate.Height = 28;
+            this.Conectados.Size = new System.Drawing.Size(259, 196);
+            this.Conectados.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 865);
+            this.Controls.Add(this.Conectados);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.contLbl);
             this.Controls.Add(this.servicios);
             this.Controls.Add(this.contraBox);
@@ -281,6 +306,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Conectados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,6 +334,8 @@
         private System.Windows.Forms.TextBox contraBox;
         private System.Windows.Forms.Button servicios;
         private System.Windows.Forms.Label contLbl;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Conectados;
     }
 }
 
