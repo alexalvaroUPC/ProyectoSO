@@ -124,3 +124,22 @@ C:\Users\alexa\OneDrive\Escritorio\Q4-2B\SO\Proyecto Poker SO\cliente\cliente\Wi
 C:\Users\alexa\OneDrive\Escritorio\Q4-2B\SO\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
 C:\Users\alexa\OneDrive\Escritorio\Q4-2B\SO\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\alexa\OneDrive\Escritorio\Q4-2B\SO\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\34606\Desktop\UPC\2º\2B\SO\Proyecto Poker SO\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\34606\Desktop\UPC\2º\2B\SO\Proyecto Poker SO\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\34606\Desktop\UPC\2º\2B\SO\Proyecto Poker SO\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.AssemblyReference.cache
+C:\Users\34606\Desktop\UPC\2º\2B\SO\Proyecto Poker SO\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\34606\Desktop\UPC\2º\2B\SO\Proyecto Poker SO\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\34606\Desktop\UPC\2º\2B\SO\Proyecto Poker SO\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\Users\34606\Desktop\UPC\2º\2B\SO\Proyecto Poker SO\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\Users\34606\Desktop\UPC\2º\2B\SO\Proyecto Poker SO\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\34606\Desktop\UPC\2º\2B\SO\Proyecto Poker SO\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\Proyecto Poker SO_Version3\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\share\Proyecto Poker SO_Version3\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\share\Proyecto Poker SO_Version3\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.AssemblyReference.cache
+C:\share\Proyecto Poker SO_Version3\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\share\Proyecto Poker SO_Version3\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.GenerateResource.cache
+C:\share\Proyecto Poker SO_Version3\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\clienteForm.csproj.CoreCompileInputs.cache
+C:\share\Proyecto Poker SO_Version3\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\share\Proyecto Poker SO_Version3\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\share\Proyecto Poker SO_Version3\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Partida.resources
+C:\share\Proyecto Poker SO_Version3\Proyecto Poker SO\cliente\cliente\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Principal.resources
