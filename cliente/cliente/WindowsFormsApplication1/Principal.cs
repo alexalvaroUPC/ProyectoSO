@@ -40,87 +40,111 @@ namespace WindowsFormsApplication1
                 switch (codigo)
                 {
                     case 1:
-                            MessageBox.Show(trozos[1]);
+                            this.Invoke(new Action(() =>
+                            {
+                                MessageBox.Show(trozos[1]);                           
+                            }));
                             break;
 
                     case 2:
-                            MessageBox.Show(trozos[1]);
+                            this.Invoke(new Action(() =>
+                            {
+                                MessageBox.Show(trozos[1]);
+                            }));
                             break;
 
                     case 3:
-                            MessageBox.Show(trozos[1]);
-                            break;
+                            this.Invoke(new Action(() =>
+                            {
+                                MessageBox.Show(trozos[1]);
+                            }));
+                            break; 
 
                     case 4:
-                            if (trozos[1] == "Has iniciado sesion")
+                            this.Invoke(new Action(() =>
                             {
-                                groupBox1.Visible = true;
-                                Conectados.Visible = true;
-                            }
-                               
-                            else if (trozos[1] == "No existe ese usuario, registrate")
-                            {
-                                MessageBox.Show(mensaje);
-                            }
+                                if(trozos[1] == "Has iniciado sesion")
+                                {
+                                    groupBox1.Visible = true;
+                                    Conectados.Visible = true;
+                                }
+
+
+                                else if (trozos[1] == "No existe ese usuario, registrate")
+                                {
+                                    MessageBox.Show(mensaje);
+                                }
+                            }));
                             break;
                     
                     case 5:
-                            MessageBox.Show(trozos[1]);
+                            this.Invoke(new Action(() =>
+                            {
+                                MessageBox.Show(trozos[1]);
+                            }));
                             break;
-                    
+
                     case 6:
-                            if (Convert.ToInt32(trozos[1]) != 1)
+                            this.Invoke(new Action(() =>
                             {
-                                string[] partes = trozos[2].Split('-');
+                                if (Convert.ToInt32(trozos[1]) != 1)
+                                {
+                                    string[] partes = trozos[2].Split('-');
 
-                                Conectados.RowCount = partes.Length;
-                                Conectados.ColumnCount = 1;
+                                    Conectados.RowCount = partes.Length;
+                                    Conectados.ColumnCount = 1;
 
-                                for (int i = 0; i < partes.Length; i++)
+                                    for (int i = 0; i < partes.Length; i++)
                                         Conectados.Rows[i].Cells[0].Value = partes[i];
-                            }
-
+                                }
+                            }));
                             break;
-                    case 7:
-                            if (trozos[1] == "No")
-                                MessageBox.Show("eeeeeee");
-                            else if (trozos[1] == "EstaYa")
-                            {
-                                string invitado = trozos[2];
-                                MessageBox.Show("El jugador " + invitado + " ya está en la partida"); ;
-                            }
-                            else 
-                            {
-                                string nombre = Convert.ToString(trozos[1]);
-                                DialogResult dialogResult = MessageBox.Show(nombre + " has invited you. Do you accept?", "", MessageBoxButtons.YesNo);
-                                if (dialogResult == DialogResult.Yes)
-                                {
-                                    string m = "7/" + nombre + "/" + username.Text + "/Y";
-                                    MessageBox.Show(m);
-                                    // Enviamos al servidor el nombre tecleado
-                                    byte[] msg = System.Text.Encoding.ASCII.GetBytes(m);
-                                    server.Send(msg);
-                                }
 
-                                else if (dialogResult == DialogResult.No)
+                    case 7:
+                            this.Invoke(new Action(() =>
+                            {
+                                if (trozos[1] == "No")
+                                    MessageBox.Show("eeeeeee");
+                                else if (trozos[1] == "EstaYa")
                                 {
-                                    string m = "7/" + nombre + "/" + username.Text + "/N";
-                                    // Enviamos al servidor el nombre tecleado
-                                    byte[] msg = System.Text.Encoding.ASCII.GetBytes(m);
-                                    server.Send(msg);
+                                    string invitado = trozos[2];
+                                    MessageBox.Show("El jugador " + invitado + " ya está en la partida"); ;
                                 }
-                        }
-                            
+                                else
+                                {
+                                    string nombre = Convert.ToString(trozos[1]);
+                                    DialogResult dialogResult = MessageBox.Show(nombre + " has invited you. Do you accept?", "", MessageBoxButtons.YesNo);
+                                    if (dialogResult == DialogResult.Yes)
+                                    {
+                                        string m = "7/" + nombre + "/" + username.Text + "/Y";
+                                        MessageBox.Show(m);
+                                        // Enviamos al servidor el nombre tecleado
+                                        byte[] msg = System.Text.Encoding.ASCII.GetBytes(m);
+                                        server.Send(msg);
+                                    }
+
+                                    else if (dialogResult == DialogResult.No)
+                                    {
+                                        string m = "7/" + nombre + "/" + username.Text + "/N";
+                                        // Enviamos al servidor el nombre tecleado
+                                        byte[] msg = System.Text.Encoding.ASCII.GetBytes(m);
+                                        server.Send(msg);
+                                    }
+                                }
+                            }));
                             break;
 
                     case 8:
-                            NumJugadores.Text = trozos[1];
-                            string[] partes2 = trozos[2].Split('-');
+                            this.Invoke(new Action(() =>
+                            {
+                                NumJugadores.Text = trozos[1];
+                                string[] partes2 = trozos[2].Split('-');
 
-                            Partida Partida = new Partida();
-                            Partida.SetJugadores(partes2);
-                            Partida.ShowDialog();
+                                Partida Partida = new Partida();
+                                Partida.SetJugadores(partes2);
+                                Partida.ShowDialog();
 
+                            }));
                             break;
                 }
             }                      
